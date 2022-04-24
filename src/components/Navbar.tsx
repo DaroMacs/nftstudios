@@ -6,17 +6,14 @@ import {
 	HStack,
 	Link,
 	IconButton,
-	Button,
-	Menu,
-	MenuButton,
-	MenuList,
-	MenuItem,
-	MenuDivider,
 	useDisclosure,
 	useColorModeValue,
 	Stack,
+	Image,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import logoPixelChart from '../assets/logo_pixelchain.png';
+import MetaMaskLogo from '../assets/MetaMask_Fox.png';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
@@ -40,8 +37,8 @@ export default function Simple() {
 
 	return (
 		<>
-			<Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-				<Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+			<Box bg={'rgba(67, 54, 54, 0.4)'} px={4}>
+				<Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
 					<IconButton
 						size={'md'}
 						icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -49,41 +46,23 @@ export default function Simple() {
 						display={{ md: 'none' }}
 						onClick={isOpen ? onClose : onOpen}
 					/>
-					<HStack spacing={8} alignItems={'center'}>
-						<Box>Logo</Box>
-						<HStack
-							as={'nav'}
-							spacing={4}
-							display={{ base: 'none', md: 'flex' }}
-						>
-							{Links.map(link => (
-								<NavLink key={link}>{link}</NavLink>
-							))}
-						</HStack>
+					<HStack spacing={1} alignItems={'center'}>
+						<Box boxSize='50px'>
+							<Image src={logoPixelChart} objectFit='cover' />
+						</Box>
+						<NavLink>PixelChain Collection</NavLink>
 					</HStack>
 					<Flex alignItems={'center'}>
-						<Menu>
-							<MenuButton
-								as={Button}
-								rounded={'full'}
-								variant={'link'}
-								cursor={'pointer'}
-								minW={0}
-							>
+						<NavLink>
+							<Flex alignSelf={'center'} justifyContent={'center'}>
 								<Avatar
+									justifyContent={'center'}
 									size={'sm'}
-									src={
-										'https://images.unsplash.com/photo-1493666438817-866a91353ca9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&s=b616b2c5b373a80ffc9636ba24f7a4a9'
-									}
+									src={MetaMaskLogo}
 								/>
-							</MenuButton>
-							<MenuList>
-								<MenuItem>Link 1</MenuItem>
-								<MenuItem>Link 2</MenuItem>
-								<MenuDivider />
-								<MenuItem>Link 3</MenuItem>
-							</MenuList>
-						</Menu>
+								<Box p={1}>Connect Wallet</Box>
+							</Flex>
+						</NavLink>
 					</Flex>
 				</Flex>
 
