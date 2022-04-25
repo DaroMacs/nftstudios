@@ -12,8 +12,8 @@ import {
 	Image,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import logoPixelChart from '../assets/logo_pixelchain.png';
-import MetaMaskLogo from '../assets/MetaMask_Fox.png';
+import logoPixelChart from '../assets/images/logo_pixelchain.png';
+import MetaMaskLogo from '../assets/images/MetaMask_Fox.png';
 
 const Links = ['Dashboard', 'Projects', 'Team'];
 
@@ -37,7 +37,13 @@ export default function Simple() {
 
 	return (
 		<>
-			<Box bg={'rgba(67, 54, 54, 0.4)'} px={4}>
+			<Box
+				position={'fixed'}
+				w={'100%'}
+				bg={'rgba(67, 54, 54, 0.4)'}
+				px={4}
+				boxShadow='2xl'
+			>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
 					<IconButton
 						size={'md'}
@@ -48,7 +54,7 @@ export default function Simple() {
 					/>
 					<HStack spacing={1} alignItems={'center'}>
 						<Box boxSize='50px'>
-							<Image src={logoPixelChart} objectFit='cover' />
+							<Image rounded={'md'} src={logoPixelChart} objectFit='cover' />
 						</Box>
 						<NavLink>PixelChain Collection</NavLink>
 					</HStack>
