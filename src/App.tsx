@@ -1,11 +1,13 @@
 import { Box } from '@chakra-ui/react';
-import './App.css';
 import Navbar from './components/Navbar';
 import MainBackground from './utils/MainBackground';
 
 function App() {
 	return (
-		<Box bg={'red.400'} h='calc(100vh)'>
+		<Box
+			bgGradient='linear(to left bottom, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #85a0e1, #74a4de, #67a8d7, #5ba6c7, #59a2b5, #5e9da4, #669794)'
+			h='calc(100vh)'
+		>
 			<Navbar />
 			<MainBackground />
 		</Box>
