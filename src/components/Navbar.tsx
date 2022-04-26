@@ -2,18 +2,16 @@ import { ReactNode } from 'react';
 import {
 	Box,
 	Flex,
-	Avatar,
 	HStack,
 	Link,
 	IconButton,
 	useDisclosure,
-	Button,
 	Image,
 	Text,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-import logoPixelChart from '../assets/images/logo_pixelchain.png';
-import MetaMaskLogo from '../assets/images/MetaMask_Fox.png';
+import logoPixelChain from '../assets/images/logo_pixelchain.png';
+import ButtonWallet from '../utils/ButtonWallet';
 
 const NavLink = ({ children }: { children: ReactNode }) => (
 	<Link
@@ -56,44 +54,15 @@ export default function Simple() {
 					/>
 					<HStack spacing={1} alignItems={'center'}>
 						<Box boxSize='35px'>
-							<Image rounded={'md'} src={logoPixelChart} objectFit='cover' />
+							<Image rounded={'md'} src={logoPixelChain} objectFit='cover' />
 						</Box>
 						<NavLink>
-							<Text fontSize={'2xl'}>PixelChain.Collection</Text>
+							<Text fontSize={'lg'} fontWeight='bold'>
+								PixelChain-Collection
+							</Text>
 						</NavLink>
 					</HStack>
-					<Flex alignItems={'center'}>
-						<Button
-							bg={'none'}
-							border={'1px'}
-							borderColor={'whiteAlpha.800'}
-							rounded='md'
-							_hover={{
-								textDecoration: 'none',
-								bg: '#e0d4f4',
-								color: '#5f4cd8',
-								borderColor: '#5f4cd8',
-							}}
-						>
-							<Flex my={'2'} alignSelf={'center'} justifyContent={'center'}>
-								<Avatar
-									justifyContent={'center'}
-									size={'sm'}
-									src={MetaMaskLogo}
-								/>
-								<Flex
-									ps={2}
-									alignItems={'center'}
-									color={'whiteAlpha.800'}
-									_hover={{
-										color: '#5f4cd8',
-									}}
-								>
-									Connect Wallet
-								</Flex>
-							</Flex>
-						</Button>
-					</Flex>
+					<ButtonWallet btnText='Connect Wallet' />
 				</Flex>
 			</Box>
 		</>

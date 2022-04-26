@@ -1,6 +1,6 @@
 import { Box } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
-import MainBackground from './utils/MainBackground';
+import Hero from './Hero';
 
 function App() {
 	return (
@@ -9,7 +9,7 @@ function App() {
 			h='calc(100vh)'
 		>
 			<Navbar />
-			<MainBackground />
+			<Hero />
 		</Box>
 	);
 }
