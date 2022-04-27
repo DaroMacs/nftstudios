@@ -9,7 +9,6 @@ import {
 	Image,
 	Text,
 } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import logoPixelChain from '../assets/images/logo_pixelchain.png';
 import ButtonWallet from '../utils/ButtonWallet';
 
@@ -33,8 +32,6 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 );
 
 export default function Simple() {
-	const { isOpen, onOpen, onClose } = useDisclosure();
-
 	return (
 		<>
 			<Box
@@ -45,13 +42,6 @@ export default function Simple() {
 				boxShadow='2xl'
 			>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
-					<IconButton
-						size={'md'}
-						icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-						aria-label={'Open Menu'}
-						display={{ md: 'none' }}
-						onClick={isOpen ? onClose : onOpen}
-					/>
 					<HStack spacing={1} alignItems={'center'}>
 						<Box boxSize='35px'>
 							<Image rounded={'md'} src={logoPixelChain} objectFit='cover' />
