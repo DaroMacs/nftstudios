@@ -31,10 +31,11 @@ export default function Navbar() {
 				boxShadow='2xl'
 				position={'fixed'}
 				zIndex={'sticky'}
+				pl={{ base: '30px', md: 0 }}
 			>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
 					<HStack spacing={1} alignItems={'center'}>
-						<Box boxSize='35px'>
+						<Box boxSize='35px' display={{ base: 'none', md: 'block' }}>
 							<Image rounded={'md'} src={logoPixelChain} objectFit='cover' />
 						</Box>
 						<NavLink>
