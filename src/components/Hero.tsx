@@ -9,7 +9,7 @@ import { fadeLeft, fadeButton, fadeTop1, fadeTop2, fadeTop3 } from './variants';
 
 const Hero = () => {
 	return (
-		<Box>
+		<Box p={{ base: '15px', md: 0 }}>
 			<Flex justifyContent={'center'} paddingTop={'150px'}>
 				<Flex w={'full'} justifyContent='space-evenly'>
 					<VStack alignItems={'start'} justifyContent={'center'}>
@@ -23,7 +23,7 @@ const Hero = () => {
 								bgGradient='linear(to top left, #286375 25%, #9524C8 100%)'
 								bgClip='text'
 								as='h1'
-								size='4xl'
+								fontSize={{ base: '4xl', md: '7xl' }}
 								letterSpacing={'wide'}
 							>
 								PixelChain
