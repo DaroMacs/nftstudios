@@ -1,14 +1,5 @@
 import { ReactNode } from 'react';
-import {
-	Box,
-	Flex,
-	HStack,
-	Link,
-	IconButton,
-	useDisclosure,
-	Image,
-	Text,
-} from '@chakra-ui/react';
+import { Box, Flex, HStack, Link, Image, Text } from '@chakra-ui/react';
 import logoPixelChain from '../assets/images/logo_pixelchain.png';
 import ButtonWallet from '../utils/ButtonWallet';
 
@@ -31,15 +22,15 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 	</Link>
 );
 
-export default function Simple() {
+export default function Navbar() {
 	return (
 		<>
 			<Box
-				position={'fixed'}
 				w={'100%'}
-				bg={'rgba(67, 54, 54, 0.4)'}
-				px={4}
+				bg={'rgba(27, 22, 22, 0.6)'}
 				boxShadow='2xl'
+				position={'fixed'}
+				zIndex={'sticky'}
 			>
 				<Flex h={16} alignItems={'center'} justifyContent={'space-around'}>
 					<HStack spacing={1} alignItems={'center'}>

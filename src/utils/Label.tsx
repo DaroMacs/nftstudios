@@ -20,7 +20,10 @@ const Label = () => {
 				bg={'pink.500'}
 			>
 				<Text px={3} py={1} fontSize={'15px'} color={'whiteAlpha.800'}>
-					<Link href='https://www.linkedin.com/in/dario-macedo-44818a55/'>
+					<Link
+						href='https://www.linkedin.com/in/dario-macedo-44818a55/'
+						isExternal
+					>
 						Dev.Dario.Macedo
 					</Link>
 				</Text>

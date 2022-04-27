@@ -1,23 +1,16 @@
 import { Text, Flex, Heading, VStack, Stack, Box } from '@chakra-ui/react';
-import ButtonWallet from './utils/ButtonWallet';
-import Label from './utils/Label';
-import vitalik from './assets/images/vitalik.png';
-import unicorn from './assets/images/unicorn.png';
-import daft from './assets/images/daft.png';
+import ButtonWallet from '../utils/ButtonWallet';
+import vitalik from '../assets/images/vitalik.png';
+import unicorn from '../assets/images/unicorn.png';
+import daft from '../assets/images/daft.png';
 import { motion } from 'framer-motion';
-import ImagePixeled from './utils/ImagePixeled';
-import {
-	fadeLeft,
-	fadeButton,
-	fadeTop1,
-	fadeTop2,
-	fadeTop3,
-} from './components/variants';
+import ImagePixeled from '../utils/ImagePixeled';
+import { fadeLeft, fadeButton, fadeTop1, fadeTop2, fadeTop3 } from './variants';
 
 const Hero = () => {
 	return (
 		<Box>
-			<Flex justifyContent={'center'} alignItems={'center'} h='100vh'>
+			<Flex justifyContent={'center'} paddingTop={'150px'}>
 				<Flex w={'full'} justifyContent='space-evenly'>
 					<VStack alignItems={'start'} justifyContent={'center'}>
 						<motion.div
@@ -33,7 +26,7 @@ const Hero = () => {
 								size='4xl'
 								letterSpacing={'wide'}
 							>
-								Pixel Chain
+								PixelChain
 								<br />
 								Collection 2.0
 							</Heading>
@@ -91,7 +84,6 @@ const Hero = () => {
 						</motion.div>
 					</Stack>
 				</Flex>
-				<Label />
 			</Flex>
 		</Box>
 	);
