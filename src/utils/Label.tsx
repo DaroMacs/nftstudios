@@ -11,8 +11,10 @@ const Label = () => {
 			transition={{ duration: 1 }}
 		>
 			<Box
-				position={'absolute'}
-				bottom={'30px'}
+				mt={10}
+				position={'relative'}
+				w={'150px'}
+				bottom={{ base: '-30px', md: '30px' }}
 				left={'0px'}
 				aria-label='Search database'
 				roundedTopRight={'md'}

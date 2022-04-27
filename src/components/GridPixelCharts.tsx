@@ -22,7 +22,15 @@ const GridPixelCharts = () => {
 				alignItems={'center'}
 				paddingTop={'30px'}
 			>
-				<Grid templateColumns='repeat(4, 1fr)' gap={3} h='100%'>
+				<Grid
+					templateColumns={{
+						base: 'repeat(1, 1fr)',
+						md: 'repeat(3, 1fr)',
+						lg: 'repeat(4, 1fr)',
+					}}
+					gap={3}
+					h='100%'
+				>
 					<Card />
 					<Card />
 					<Card />

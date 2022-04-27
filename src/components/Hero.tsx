@@ -57,7 +57,7 @@ const Hero = () => {
 						</motion.div>
 					</VStack>
 
-					<Stack gap={8}>
+					<Stack gap={8} display={{ base: 'none', md: 'flex' }}>
 						<motion.div variants={fadeTop1} initial='hidden' animate='visible'>
 							<ImagePixeled
 								src={daft}
