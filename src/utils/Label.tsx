@@ -14,9 +14,8 @@ const Label = () => {
 				mt={10}
 				position={'relative'}
 				w={'150px'}
-				bottom={{ base: '-30px', md: '30px' }}
+				bottom={'30px'}
 				left={'0px'}
-				aria-label='Search database'
 				roundedTopRight={'md'}
 				roundedBottomRight={'md'}
 				bg={'pink.500'}

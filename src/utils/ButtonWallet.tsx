@@ -7,7 +7,7 @@ interface buttonProps {
 
 const ButtonWallet = ({ btnText }: buttonProps) => {
 	return (
-		<Flex alignItems={'center'}>
+		<Flex alignItems={'center'} me={10}>
 			<Button
 				bg={'none'}
 				border={'1px'}

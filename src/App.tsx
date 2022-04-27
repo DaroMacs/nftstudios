@@ -6,7 +6,7 @@ import Label from './utils/Label';
 import GridPixelCharts from './components/GridPixelCharts';
 
 function App() {
-	const [isConnected, setIsConnected] = useState(false);
+	const [isConnected, setIsConnected] = useState(true);
 
 	return (
 		<Box
