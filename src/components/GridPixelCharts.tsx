@@ -15,7 +15,7 @@ const GridPixelCharts = () => {
 	const [nftsData, setNftsData] = useState([]);
 	const [loading, setLoading] = useState(true);
 
-	const handleScroll = (e: { target: HTMLInputElement }) => {
+	const handleScroll = (e: any) => {
 		console.log(e.target.documentElement.scrollTop);
 	};
 
