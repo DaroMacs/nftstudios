@@ -1,16 +1,11 @@
 import { Flex, Avatar, Button } from '@chakra-ui/react';
 import MetaMaskLogo from '../assets/images/MetaMask_Fox.png';
-import { IsConnected } from '../components/Navbar';
 
-interface buttonProps extends IsConnected {
+interface buttonProps {
 	btnText: string;
 }
 
-const ButtonWallet = ({ btnText, setIsConnected }: buttonProps) => {
-	const handleConnection = () => {
-		setIsConnected(true);
-	};
-
+const ButtonWallet = ({ btnText }: buttonProps) => {
 	return (
 		<Flex alignItems={'center'} me={10}>
 			<Button
@@ -25,7 +20,6 @@ const ButtonWallet = ({ btnText, setIsConnected }: buttonProps) => {
 					color: '#5f4cd8',
 					borderColor: '#5f4cd8',
 				}}
-				onClick={() => handleConnection()}
 			>
 				<Avatar
 					justifyContent={'center'}

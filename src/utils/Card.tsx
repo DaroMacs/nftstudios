@@ -8,7 +8,6 @@ import {
 	Image,
 	Link,
 } from '@chakra-ui/react';
-import daft from '../assets/images/daft.png';
 import { NFT } from '../components/GridPixelCharts';
 
 export default function Card(props: NFT) {
@@ -43,7 +42,7 @@ export default function Card(props: NFT) {
 							pos: 'absolute',
 							top: 5,
 							left: 0,
-							backgroundImage: `url(${daft})`,
+							backgroundImage: `url(${image_url})`,
 							filter: 'blur(15px)',
 							zIndex: -1,
 						}}

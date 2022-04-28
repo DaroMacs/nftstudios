@@ -11,10 +11,10 @@ const Label = () => {
 			transition={{ duration: 1 }}
 		>
 			<Box
-				mt={10}
+				mt={{ base: 5, md: 10 }}
 				position={'relative'}
 				w={'150px'}
-				bottom={'30px'}
+				bottom={{ base: '30px', md: '0px' }}
 				left={'0px'}
 				roundedTopRight={'md'}
 				roundedBottomRight={'md'}
