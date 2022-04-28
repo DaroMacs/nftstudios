@@ -3,6 +3,10 @@ import { Box, Flex, HStack, Link, Image, Text } from '@chakra-ui/react';
 import logoPixelChain from '../assets/images/logo_pixelchain.png';
 import ButtonWallet from '../utils/ButtonWallet';
 
+export interface IsConnected {
+	setIsConnected: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
 const NavLink = ({ children }: { children: ReactNode }) => (
 	<Link
 		px={2}
@@ -22,7 +26,8 @@ const NavLink = ({ children }: { children: ReactNode }) => (
 	</Link>
 );
 
-export default function Navbar() {
+export default function Navbar({ setIsConnected }: IsConnected) {
+	const handleConnection = () => {};
 	return (
 		<>
 			<Box
@@ -44,7 +49,10 @@ export default function Navbar() {
 							</Text>
 						</NavLink>
 					</HStack>
-					<ButtonWallet btnText='Connect Wallet' />
+					<ButtonWallet
+						btnText='Connect Wallet'
+						setIsConnected={setIsConnected}
+					/>
 				</Flex>
 			</Box>
 		</>

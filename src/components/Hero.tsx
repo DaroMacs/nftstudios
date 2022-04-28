@@ -6,8 +6,9 @@ import daft from '../assets/images/daft.png';
 import { motion } from 'framer-motion';
 import ImagePixeled from '../utils/ImagePixeled';
 import { fadeLeft, fadeButton, fadeTop1, fadeTop2, fadeTop3 } from './variants';
+import { IsConnected } from './Navbar';
 
-const Hero = () => {
+const Hero = ({ setIsConnected }: IsConnected) => {
 	return (
 		<Box p={{ base: '15px', md: 0 }}>
 			<Flex justifyContent={'center'} paddingTop={'150px'}>
@@ -53,7 +54,10 @@ const Hero = () => {
 							animate='visible'
 							transition={{ duration: 1.6 }}
 						>
-							<ButtonWallet btnText='Get Started' />
+							<ButtonWallet
+								btnText='Get Started'
+								setIsConnected={setIsConnected}
+							/>
 						</motion.div>
 					</VStack>
 

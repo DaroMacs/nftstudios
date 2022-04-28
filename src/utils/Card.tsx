@@ -9,8 +9,13 @@ import {
 	Link,
 } from '@chakra-ui/react';
 import daft from '../assets/images/daft.png';
+import { NFT } from '../components/GridPixelCharts';
 
-export default function Card() {
+export default function Card(props: NFT) {
+	console.log(props);
+
+	const { name, token_id, image_url, permalink } = props;
+
 	return (
 		<Box>
 			<Center py={7}>
@@ -48,13 +53,13 @@ export default function Card() {
 							},
 						}}
 					>
-						<Link href='https://chakra-ui.com/link' isExternal>
+						<Link href={permalink} isExternal>
 							<Image
 								rounded={'lg'}
 								height={150}
 								width={200}
 								objectFit={'cover'}
-								src={daft}
+								src={image_url}
 							/>
 						</Link>
 					</Box>
@@ -66,11 +71,26 @@ export default function Card() {
 						>
 							Name
 						</Text>
-						<Link href='https://chakra-ui.com/link' isExternal>
-							<Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
-								Daft Punk
+						<Link href={permalink} isExternal>
+							<Heading
+								fontSize={'lg'}
+								fontFamily={'body'}
+								fontWeight={500}
+								isTruncated
+							>
+								{name}
 							</Heading>
 						</Link>
+						<Text
+							color={'gray.500'}
+							fontSize={'sm'}
+							textTransform={'uppercase'}
+						>
+							Token ID
+						</Text>
+						<Heading fontSize={'xs'} fontFamily={'body'} fontWeight={300}>
+							{token_id}
+						</Heading>
 					</Stack>
 				</Box>
 			</Center>
