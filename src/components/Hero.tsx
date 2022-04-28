@@ -1,5 +1,6 @@
 import { Text, Flex, Heading, VStack, Stack, Box } from '@chakra-ui/react';
 import ButtonWallet from '../utils/ButtonWallet';
+import Label from '../utils/Label';
 import vitalik from '../assets/images/vitalik.png';
 import unicorn from '../assets/images/unicorn.png';
 import daft from '../assets/images/daft.png';
@@ -92,6 +93,7 @@ const Hero = () => {
 					</motion.div>
 				</Stack>
 			</Flex>
+			<Label />
 		</Box>
 	);
 };

@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Box } from '@chakra-ui/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import Label from './utils/Label';
 import GridPixelCharts from './components/GridPixelCharts';
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
 		>
 			<Navbar />
 			{!isConnected ? <Hero /> : <GridPixelCharts />}
-			<Label />
 		</Box>
 	);
 }
