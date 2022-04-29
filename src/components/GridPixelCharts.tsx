@@ -87,6 +87,7 @@ const GridPixelCharts = () => {
 							base: 'repeat(1, 1fr)',
 							md: 'repeat(3, 1fr)',
 							lg: 'repeat(4, 1fr)',
+							xxl: 'repeat(2, 1fr)',
 						}}
 						gap={3}
 						h='100%'
