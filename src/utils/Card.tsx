@@ -11,8 +11,6 @@ import {
 import { NFT } from '../components/GridPixelCharts';
 
 export default function Card(props: NFT) {
-	console.log(props);
-
 	const { name, token_id, image_url, permalink } = props;
 
 	return (
@@ -80,16 +78,6 @@ export default function Card(props: NFT) {
 								{name}
 							</Heading>
 						</Link>
-						<Text
-							color={'gray.500'}
-							fontSize={'sm'}
-							textTransform={'uppercase'}
-						>
-							Token ID
-						</Text>
-						<Heading fontSize={'xs'} fontFamily={'body'} fontWeight={300}>
-							{token_id}
-						</Heading>
 					</Stack>
 				</Box>
 			</Center>
