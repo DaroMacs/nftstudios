@@ -11,7 +11,7 @@ const Label = () => {
 			transition={{ duration: 1 }}
 		>
 			<Box
-				mt={{ base: 5, md: 10 }}
+				mt={{ base: '80px', md: 10 }}
 				position={'relative'}
 				w={'150px'}
 				bottom={{ base: '30px', md: '0px' }}

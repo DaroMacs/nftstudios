@@ -13,7 +13,7 @@ const Hero = ({ connect }: Connect) => {
 	return (
 		<Box p={{ base: '15px', md: 0 }}>
 			<Flex
-				paddingTop={'150px'}
+				paddingTop={{ base: '100px', md: '150px' }}
 				w={'full'}
 				justifyContent='space-evenly'
 				direction={{ base: 'column', md: 'row' }}
