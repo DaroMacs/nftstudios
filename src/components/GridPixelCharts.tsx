@@ -1,13 +1,4 @@
-import {
-	Grid,
-	Heading,
-	Box,
-	VStack,
-	Flex,
-	Switch,
-	Stack,
-	Text,
-} from '@chakra-ui/react';
+import { Grid, Heading, Box, VStack, Flex } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Card from '../utils/Card';
 import Spinner from './Spinner';
@@ -24,8 +15,6 @@ const GridPixelCharts = () => {
 	let offset = 0;
 	const [nftsData, setNftsData] = useState<NFT[]>([]);
 	const [loadingScroll, setLoadingScroll] = useState(false);
-	const [switchValue, setSwitchValue] = useState(false);
-	const [order, setOrder] = useState('desc');
 
 	const fetchNFTS = () => {
 		setTimeout(() => {

@@ -1,8 +1,14 @@
-import { Box, Flex, HStack, Link, Image, Text } from '@chakra-ui/react';
+import { Box, Flex, HStack, Link, Image, Text, Button } from '@chakra-ui/react';
 import logoPixelChain from '../assets/images/logo_pixelchain.png';
 import ButtonWallet from '../utils/ButtonWallet';
+import { Connect } from '../App';
 
-export default function Navbar() {
+export default function Navbar({
+	connect,
+	truncatedAddress,
+	isConnected,
+	disconnect,
+}: Connect) {
 	return (
 		<Box
 			w={'100%'}
@@ -32,7 +38,19 @@ export default function Navbar() {
 						<Text fontSize={'lg'}>PixelChain Collection</Text>
 					</Link>
 				</HStack>
-				<ButtonWallet btnText='Connect Wallet' />
+				{isConnected ? (
+					<Flex gap={4} align='center'>
+						<Box color={'green.600'} fontWeight={'bold'}>
+							Connected:{' '}
+							<Text color={'whiteAlpha.800'}>{truncatedAddress}</Text>
+						</Box>
+						<Button size={'sm'} onClick={disconnect}>
+							Disconnect
+						</Button>
+					</Flex>
+				) : (
+					<ButtonWallet btnText='Connect Wallet' connect={connect} />
+				)}
 			</Flex>
 		</Box>
 	);

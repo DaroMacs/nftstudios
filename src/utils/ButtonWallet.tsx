@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 
 interface buttonProps {
 	btnText: string;
+	connect: () => Promise<void>;
 }
 
-const ButtonWallet = ({ btnText }: buttonProps) => {
+const ButtonWallet = ({ btnText, connect }: buttonProps) => {
 	return (
 		<Flex alignItems={'center'} me={10}>
 			<motion.div whileHover={{ scale: 1.03 }}>
@@ -22,6 +23,7 @@ const ButtonWallet = ({ btnText }: buttonProps) => {
 						color: '#5f4cd8',
 						borderColor: '#5f4cd8',
 					}}
+					onClick={connect}
 				>
 					<Avatar
 						justifyContent={'center'}
