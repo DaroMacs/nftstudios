@@ -15,7 +15,7 @@ const Label = () => {
 				position={'relative'}
 				w={'150px'}
 				bottom={{ base: '30px', md: '0px' }}
-				left={'0px'}
+				left={{ base: '-15px', md: 0 }}
 				roundedTopRight={'md'}
 				roundedBottomRight={'md'}
 				bg={'pink.500'}
