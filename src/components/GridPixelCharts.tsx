@@ -1,4 +1,13 @@
-import { Grid, Heading, Box, VStack, Flex } from '@chakra-ui/react';
+import {
+	Grid,
+	Heading,
+	Box,
+	VStack,
+	Flex,
+	Switch,
+	Stack,
+	Text,
+} from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import Card from '../utils/Card';
 import Spinner from './Spinner';
@@ -14,8 +23,9 @@ export interface NFT {
 const GridPixelCharts = () => {
 	let offset = 0;
 	const [nftsData, setNftsData] = useState<NFT[]>([]);
-	const [loading, setLoading] = useState(false);
 	const [loadingScroll, setLoadingScroll] = useState(false);
+	const [switchValue, setSwitchValue] = useState(false);
+	const [order, setOrder] = useState('desc');
 
 	const fetchNFTS = () => {
 		setTimeout(() => {
@@ -31,7 +41,7 @@ const GridPixelCharts = () => {
 		};
 
 		fetch(
-			`https://api.opensea.io/api/v1/assets?order_direction=desc&asset_contract_addresses=0x9e1f3e8db4d1119894624632499eaed1e56d2b1d&limit=8&offset=${offset}`,
+			`https://api.opensea.io/api/v1/assets?order_direction=asc&asset_contract_addresses=0x9e1f3e8db4d1119894624632499eaed1e56d2b1d&limit=8&offset=${offset}`,
 			options
 		)
 			.then(response => response.json())
@@ -39,7 +49,7 @@ const GridPixelCharts = () => {
 				const newNFT: any = [];
 				response.assets.forEach((nft: NFT) => newNFT.push(nft));
 
-				setNftsData(oldNFT => [...oldNFT, ...newNFT]);
+				setNftsData(oldNFTs => [...oldNFTs, ...newNFT]);
 			})
 			.catch(err => console.error(err));
 
@@ -47,10 +57,6 @@ const GridPixelCharts = () => {
 	};
 
 	const handleScroll = (e: any) => {
-		console.log('top', e.target.documentElement.scrollTop);
-		console.log('height', e.target.documentElement.scrollHeight);
-		console.log('w2', window.innerHeight);
-
 		if (
 			window.innerHeight + e.target.documentElement.scrollTop + 1 >
 			e.target.documentElement.scrollHeight
@@ -82,7 +88,6 @@ const GridPixelCharts = () => {
 					<br />
 					Collection 2.0
 				</Heading>
-
 				<VStack
 					justifyContent={'center'}
 					alignItems={'center'}

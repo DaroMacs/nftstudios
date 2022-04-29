@@ -5,7 +5,7 @@ import Hero from './components/Hero';
 import GridPixelCharts from './components/GridPixelCharts';
 
 function App() {
-	const [isConnected, setIsConnected] = useState(true);
+	const [isConnected, setIsConnected] = useState(false);
 
 	return (
 		<Box
